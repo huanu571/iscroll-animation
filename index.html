@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>入场动画 with IScroll 5</title>
+  <link rel="stylesheet" href="http://cdn.staticfile.org/normalize/3.0.1/normalize.min.css">
+  <link rel="stylesheet" href="iscroll-animation.css">
+</head>
+<body>
+  <article>
+    <section><h1 style="opacity: 0">Hello</h1></section>
+    <section><h2 style="opacity: 0">World</h2></section>
+  </article>
+  <script src="http://cdn.staticfile.org/zepto/1.0rc1/zepto.min.js"></script>
+  <script src="http://cdn.staticfile.org/iScroll/5.1.1/iscroll-min.js"></script>
+  <script src="iscroll-animation.js"></script>
+  <script>
+  scrollAnimationFunctions[0] = function () {
+    $('h1').animate({opacity: 1})
+  }
+  scrollAnimationFunctions[1] = function () {
+    $('h2').animate({opacity: 1})
+  }
+  </script>
+</body>
+</html>
